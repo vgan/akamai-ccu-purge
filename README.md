@@ -1,15 +1,21 @@
-akamai-ccu-purge
+akamai_refresh
 ================
 
-Just a simple script to flush Akamai Cache
+Just a simple script to refresh Akamai Cache
 
+Note: Configure credentials in akamai_creds.py before using
 
-# Flush a URL
-	python purge.py -U username@foobar.org -P superSecurePassword -u http://www.foobar.org
+# Refresh a URL
+	python akamai_refresh.py -u http://www.foobar.org
 
-# Flush a CPCODE
-
-	python purge.py -U username@foobar.org -P superSecurePassword -c CPCODE
+# Refresh a CPCODE
+	python akamai_refresh.py -c CPCODE
+	
+# Additional options
+	type:
+		-t remove or invalidate (default it invalidate)
+	domain:
+		-D staging or production (default is production)
 
 
 # Documentation	
